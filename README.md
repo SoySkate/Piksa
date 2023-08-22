@@ -1,3 +1,22 @@
+TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+-UserRegistrerPage/saveLogin
+-obligacion de config screen si es la firtstime
+-WorkScreen{}
+-ConfigScreen{}
+-StatisticsScreen{}
+-RegisterClient{}
+-
+
+-Mirar el tema impresora?
+______________________________________________________________________________________________________________
+DONE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+
+
+
+
+
+
+__________________________________________________________________________________________________________________________
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
