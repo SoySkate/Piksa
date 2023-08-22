@@ -26,15 +26,15 @@ export default function Register(){
           <div className='flex flex-col items-center space-y-8'> 
             <div className='flex flex-col'>             
               <label className='mx-2 text-sm font-serif '>Register Name:</label>
-              <input className="rounded" type="text" value={registerUser.username} onChange={(e)=>setRegisterUser({...registerUser,username:e.target.value})}/>
+              <input className="rounded pl-2" type="text" value={registerUser.username} onChange={(e)=>setRegisterUser({...registerUser,username:e.target.value})}/>
             </div>
             <div className='flex flex-col'>
               <label className='mx-2 text-sm font-serif '>Register Password:</label>
-              <input className="rounded" type="password" value={registerUser.password} onChange={(e)=>setRegisterUser({...registerUser, password:e.target.value})}/>
+              <input className="rounded pl-2" type="password" value={registerUser.password} onChange={(e)=>setRegisterUser({...registerUser, password:e.target.value})}/>
             </div>      
             <div className='flex flex-col'>
               <label className='mx-2 text-sm font-serif '>Confirm Password:</label>
-              <input className="rounded" type="password" value={confirmPass} onChange={(e)=>setConfirmPass(e.target.value)}/>
+              <input className="rounded pl-2" type="password" value={confirmPass} onChange={(e)=>setConfirmPass(e.target.value)}/>
             </div>             
             <button className='bg-blue-300 rounded-2xl px-4 py-1 my-2 font-mono font-semibold' type="submit">Registrarse</button>
           </div>         

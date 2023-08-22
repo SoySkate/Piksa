@@ -28,16 +28,16 @@ export default function Home() {
           <div className='flex flex-col items-center space-y-8 '>
             <div className='flex flex-col'>
               <label className='mx-2 text-sm font-serif'>User Name:</label>
-              <input className="rounded" type='text' value={loginUser.username} onChange={(e)=>setLoginUser({...loginUser,username: e.target.value})}></input>
+              <input className="rounded pl-2" type='text' value={loginUser.username} onChange={(e)=>setLoginUser({...loginUser,username: e.target.value})}></input>
             </div>
             <div className='flex flex-col'>
               <label className='mx-2 text-sm font-serif'>Password:</label>
-              <input className="rounded" type="password" value={loginUser.password} onChange={(e)=>setLoginUser({...loginUser, password:e.target.value})} />
+              <input className="rounded pl-2" type="password" value={loginUser.password} onChange={(e)=>setLoginUser({...loginUser, password:e.target.value})} />
             </div>  
             {/* Campos de entrada para el inicio de sesión */}
             <button className='bg-green-300 rounded-2xl px-4 py-1 my-2 font-mono font-semibold' type="submit">Iniciar Sesión</button>
           </div>         
-        </form>
+        </form>        
         <div></div>
         <div></div>
       </div>
