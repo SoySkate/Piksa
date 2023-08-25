@@ -1,18 +1,23 @@
 TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
--UserRegistrerPage/saveLogin
--obligacion de config screen si es la firtstime
--WorkScreen{}
--ConfigScreen{}
--StatisticsScreen{}
--RegisterClient{}
--
 
--Mirar el tema impresora?
+//pasar la funcio data addUser aqui(registerComponent) i aixi ferho amb el handleclick també
+
+
 ______________________________________________________________________________________________________________
 DONE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 
 
 
+
+
+Ha de tenir::::::::::::::::::::::::::::::::
+-UserRegistrerPage/saveLogin
+-obligacion de config screen si es la firtstime
+-WorkScreen(loged){}
+-ConfigScreen{}
+-StatisticsScreen{}
+-RegisterClient{}
+-Mirar el tema impresora?
 
 
 

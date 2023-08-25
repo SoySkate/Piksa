@@ -23,11 +23,12 @@ export default function Home() {
      event.preventDefault();
      if(loginUser.nombre && loginUser.password !== ''){
        setLoginUser({...loginUser, id:intID+1});
-     }
+     }     
      //controla aqui el nameInput
-    Data(loginUser);
-     console.log(loginUser);
+     
+     console.log("supuestamente iniciandosesion: ",loginUser);
    };
+
 
   return (
   <main className='overflow-hidden w-screen h-screen flex justify-evenly items-center'>
