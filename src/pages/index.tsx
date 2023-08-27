@@ -23,6 +23,7 @@ export default function Home() {
      event.preventDefault();
      if(loginUser.nombre && loginUser.password !== ''){
        setLoginUser({...loginUser, id:intID+1});
+      
      }     
      //controla aqui el nameInput
      
