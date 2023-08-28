@@ -2,34 +2,36 @@ import Image from 'next/image';
 import React from "react"
 import { Inter } from 'next/font/google';
 import { useState } from 'react';
+import { useContext } from "react";
 import User from '@/components/Modals/User';
-import {createClient} from '@supabase/supabase-js';
-import { identify } from '@amplitude/analytics-node';
-import Data from '@/context/data';
+import {DataContext} from '../context/DataContext';
+import { useRouter } from 'next/router';
 
-
-
-
-//const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export default function Home() {
+  const exampleContext = useContext(DataContext) as { userList: User[], setUserList: React.Dispatch<React.SetStateAction<User[]>> };
   const [loginUser, setLoginUser] = useState<User>({
     id:1,
     nombre: '',
     password: '',
   });
+  const [verificacionExitosa, setVerificacionExitosa] = useState(false);
+  const router = useRouter();
 
   let intID = loginUser.id;
-   const handleLoginSubmit =async (event: React.FormEvent) => {
+   const handleLoginSubmit =(event: React.FormEvent) => {
      event.preventDefault();
      if(loginUser.nombre && loginUser.password !== ''){
        setLoginUser({...loginUser, id:intID+1});
-      
+       exampleContext.userList.map(e=>{
+        if(e.id===loginUser.id&&e.nombre===loginUser.nombre){
+            console.log('aqui entras en el login pq coinciden los datos')
+            setVerificacionExitosa(true);
+            router.push(`/user/${loginUser.id}`);
+        }
+       })
      }     
-     //controla aqui el nameInput
-     
-     console.log("supuestamente iniciandosesion: ",loginUser);
+     console.log(loginUser);
    };
-
 
   return (
   <main className='overflow-hidden w-screen h-screen flex justify-evenly items-center'>
@@ -53,7 +55,7 @@ export default function Home() {
             <button className='bg-green-300 rounded-2xl px-4 py-1 my-2 font-mono font-semibold' type="submit">Iniciar Sesión</button>
           </div>         
         </form>        
-        <div></div>
+        <div><button></button></div>
         <div></div>
       </div>
     </div>  
