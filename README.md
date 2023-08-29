@@ -1,7 +1,11 @@
 TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+-Necesario el Auuth del User. 
+-Hacer los componentes que trabajan en la pantalla del work, dentro de user/ID que es cuando el usuario ya esta logged.
+-Chequear porque me detecta todo el rato que no estoy verificado mirar chat ultimo mensaje, y entender bien la estructura del programa
+para poder corregirlo.
 
-//pasar la funcio data addUser aqui(registerComponent) i aixi ferho amb el handleclick també
 
+-Index y Register no es seguro lo estoy harcodeando demomento(tener en cuenta)
 
 ______________________________________________________________________________________________________________
 DONE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.

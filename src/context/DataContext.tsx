@@ -13,7 +13,7 @@ export default function DataContextProvider({children}:any){
     {
       id: 2,
       nombre: 'user2',
-      password: 'qwerty'
+      password: '4321'
     }]);
      //const [username, setUsername] = useState('midudev');
     return(

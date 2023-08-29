@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import ProtectedRoute from '@/components/ProtectedRoute';
 
 function UserDetails() {
   const router = useRouter();
@@ -13,14 +14,15 @@ function UserDetails() {
   useEffect(() => {
     // Aquí puedes cargar los detalles del usuario basados en el ID
     // Puedes usar el valor de "id" para realizar consultas específicas a la base de datos
+    
   }, [id]);
 
   return (
-    <div>
+    <ProtectedRoute>
       {/* Aquí mostrarás los detalles del usuario */}
-      <h1>Detalles del Usuario {id}</h1>
+      <h1>ID del Usuario: {id}</h1>
       {/* ...otros detalles del usuario */}
-    </div>
+    </ProtectedRoute>
   );
 }
 
