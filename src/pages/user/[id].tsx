@@ -1,8 +1,7 @@
-// pages/user/[id].tsx
-
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import ProtectedRoute from '@/components/ProtectedRoute';
+import UserWork from '@/components/UserWork';
 
 function UserDetails() {
   const router = useRouter();
@@ -21,6 +20,7 @@ function UserDetails() {
     <ProtectedRoute>
       {/* Aquí mostrarás los detalles del usuario */}
       <h1>ID del Usuario: {id}</h1>
+      <UserWork/>
       {/* ...otros detalles del usuario */}
     </ProtectedRoute>
   );

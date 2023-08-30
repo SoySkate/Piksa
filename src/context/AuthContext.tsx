@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useState } from 'react';
 
 
-export const AuthContext = React.createContext({});
+export const AuthContext = createContext({});
+
 
 export function AuthProvider({ children }:any) {
   const [verificacionExitosa, setVerificacionExitosa] = useState<boolean>(false);
