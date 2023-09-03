@@ -1,12 +1,14 @@
 TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+-Pasar props correctas als buttons i mirar de crearlos el teclado de numeros almenos, despues ya hare lo demas  
+
 -Necesario el Auuth del User. 
 -Hacer los componentes que trabajan en la pantalla del work, dentro de user/ID que es cuando el usuario ya esta logged.
--Supuestamente esta solved el tema del context, pero asegurarme de que va bien el register y el login ya que lo he modificado similar al authcontext y he cambiado el datacontext como el auth pq me parecia mejor.
+-Supuestamente esta solved el tema del context, pero(no entra la data"hace refresh con la data y luego vuelve al estado inciial sin data") asegurarme de que va bien el register y el login ya que lo he modificado similar al authcontext y he cambiado el datacontext como el auth pq me parecia mejor.
 
 -//Me entra en el else tambien por la cara xd why? Inicio de sesion nose porque me entra en el else cuando itroduzco bien el user y la password no entiendo xd
 
--Index y Register no es seguro lo estoy harcodeando demomento(tener en cuenta)
 
+-Index y Register no es seguro lo estoy harcodeando demomento(tener en cuenta)
 ______________________________________________________________________________________________________________
 DONE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 
