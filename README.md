@@ -1,7 +1,15 @@
-TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
--Pasar props correctas als buttons i mirar de crearlos el teclado de numeros almenos, despues ya hare lo demas  
-
+TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+-Tengo el problema en ver la lista de los productos porque esta undefined pero esta mejor eso ya tiene una estructura mejor. (!ERROR: .map no puede pq esta undefined ell productsArray ->((AddButton))      :)
+-Que cada item de la comanda sea un componente para poder hacerle cosas
+-poner buttons de descuento? o generarlos?
+-poner una ruta protegida para las estadisticas, y algo mas creo
+_______________________________________________________________________________________________________________
 -Necesario el Auuth del User. 
+-Perque faci Factura normal i simplificada
+-Ha de tenir un reistrede comandes i de quins roductes han sortit i de quines factures s han fet
+/Algo guay seria inventari control. Ventas/Compras control.
+-Temps que dura una pizza i que treballi segons les comandes i pizzes anteriors.
+//Poder guardar clientes al programa. Com el Klam
 -Hacer los componentes que trabajan en la pantalla del work, dentro de user/ID que es cuando el usuario ya esta logged.
 -Supuestamente esta solved el tema del context, pero(no entra la data"hace refresh con la data y luego vuelve al estado inciial sin data") asegurarme de que va bien el register y el login ya que lo he modificado similar al authcontext y he cambiado el datacontext como el auth pq me parecia mejor.
 
