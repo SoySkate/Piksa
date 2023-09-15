@@ -10,6 +10,7 @@ export default function AddListButton({abrirModal, listProducts, mostrarProducto
     const openModal=()=>{
         abrirModal();        
     }
+    //aquesta list te de venir del DBContext bro
     let arrayStrings:Product[]=listProducts as Product[];
   
 

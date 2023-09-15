@@ -1,5 +1,6 @@
 TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
--Tengo el problema en ver la lista de los productos porque esta undefined pero esta mejor eso ya tiene una estructura mejor. (!ERROR: .map no puede pq esta undefined ell productsArray ->((AddButton))      :)
+-Hacer buttons para eliminar cosas de la lista de la comanda o para eliminar productos. (por ejemplo en condiguracion o editar o algo asi para borrar esto products.)Hacerle un poco de css xd
+
 -Que cada item de la comanda sea un componente para poder hacerle cosas
 -poner buttons de descuento? o generarlos?
 -poner una ruta protegida para las estadisticas, y algo mas creo
@@ -17,6 +18,8 @@ ________________________________________________________________________________
 
 
 -Index y Register no es seguro lo estoy harcodeando demomento(tener en cuenta)
+
+---Sha de fer el responsive amicc xd pq esta jambao lo que tens ara
 ______________________________________________________________________________________________________________
 DONE::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
 

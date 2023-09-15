@@ -16,13 +16,12 @@ export default function UserWork(){
     const [precio, setPrecio]=useState<string[]>([])
     //comanda((mejor que sea una lista de componentes))
     const [comanda, setComanda] = useState<string[]>([]);
-    //lista de productos:
+    //lista de productos que ha de venir del DBContext:
     const [listProducts, setListProducts] = useState<ListaProducts[]>([]);    
     //TextModalListaProductos
     const [textModal, setTextModal]=useState<string>('');
     const [mostrarModal, setMostrarModal] = useState(false);
     //Lista de productos
-    const [products, setProducts]=useState<Product[]>([])
     const [mostrarModalProduct, setMostrarModalProduct] =useState(false)
     const [nameProduct, setNameProduct]=useState<string>('')
     const [priceProduct, setPriceProduct]=useState<string>('')
@@ -48,8 +47,8 @@ export default function UserWork(){
     const abrirModal = () => {
         setMostrarModal(true);
       };
-    const buttonAddList =()=>{
-        //seria lo seu posar aqui la funcio de crear button       
+      //crea una lista de productos
+    const buttonAddList =()=>{            
         if(textModal!==''){
         const nuevaListProducts = new ListaProducts(listProducts.length+1,textModal)
         setListProducts([...listProducts,nuevaListProducts])
@@ -64,14 +63,14 @@ export default function UserWork(){
         setMostrarModalProduct(false); 
         const nuevoProducto= new Product(1,nameProduct, Number(priceProduct))
         if(nameProduct!==''&&priceProduct!==''){           
-                if(textUrl!==''){
+                if(textUrl!==''){//Aqui es con la foto que se le ha indicado
                 nuevoProducto.image=textUrl
-                setProducts([...products, nuevoProducto])
+                actualListOfProducts?.products.push(nuevoProducto);                
                 console.log('este es mi nuevo producto',nuevoProducto)
                 }
-                else{                   
-                   setProducts([...products, nuevoProducto])
-                   console.log('este es mi nuevo producto CON FOTO',nuevoProducto)
+                else{          
+                    //aqui es con la foto default         
+                    actualListOfProducts?.products.push(nuevoProducto);                                    
                 }
          }    
         setNameProduct('')
@@ -101,10 +100,12 @@ export default function UserWork(){
       const precioValue=()=>{
         setPrecio([])
       }
+      //selecciono el actualProduct
+      const selectActualProduct=(product:Product)=>{
+        setActualProduct(product)
+      }
+      //selecciono la actualList of Products
       const mostrarProductosLista=(listP:ListaProducts)=>{
-        console.log("aqui hago las cosas para mostrar los productos")
-        //ESTO ES VIABLE?:
-        //<AddButton listaP={listaP}>
         setActualListOfProducts(listP)        
       }
     return(
@@ -112,10 +113,9 @@ export default function UserWork(){
         <div className="m-4">
             <div className="flex justify-evenly"><div></div>
             <div></div>
-            <div>PIKSAKLAM</div></div>            
-            <div className="flex border-2 border-black h-screen justify-between">
-            
-                <div className=" w-2/5 border-r-2 border-black grid">
+            <div>PIKSAKLAM(nombre del negocio)</div></div>            
+            <div className="flex border-2 border-black h-screen justify-between">           
+                <div className=" w-2/5 border-r-2 border-black grid">                    
                     <div className="bg-white border-black"><h1 className="border-b-4 border-black text-center   ">COMANDA</h1> 
                         <div className="  p-4 w-[450px] h-[265px] overflow-auto">
                             <ul className="">
@@ -138,8 +138,11 @@ export default function UserWork(){
                             <div>ItemB 2</div>
                             <div>ItemB 3</div>
                             <div>ItemB 4</div>
-                        </div>                  
-                        <div className="m-2 flex flex-wrap"> 
+                        </div>                 
+
+                    <button><img className="h-10 w-10" src="/editImage.png" alt="Imagen De Botton De Editar" /></button>
+
+                    <div className="m-2 flex flex-wrap"> 
                     {mostrarModalProduct&&(<div className="bg-green-700 h-60 rounded flex flex-col justify-evenly items-center">                      
                     <h3 className="text-sm underline ">Nombre del Producto:</h3>
                     <input className="m-2" type="text" value={nameProduct} onChange={(e)=>setNameProduct(e.target.value)}/>
@@ -151,10 +154,11 @@ export default function UserWork(){
                     </div>)}
                     {/*Supuestamente aqui deberia visualizar la lista de productos (<AddButton/>)
                     O llamar cada AddButton que le pertenezca a la lista selecioanda de (<AddListButton>)*/}           
-                    <AddButton crearProduct={crearProduct} products={products} onLineaComanda={onLineaComanda} precio={precio} precioValue={precioValue} actualListOfProducts={actualListOfProducts}/></div>
+                    <AddButton selectActualProduct={selectActualProduct} crearProduct={crearProduct} onLineaComanda={onLineaComanda} precio={precio} precioValue={precioValue} actualListOfProducts={actualListOfProducts}/></div>
                     </div>
                     
                     <div className="border-t-4 border-black p-2 overflow-auto ">
+                    <button><img className="h-10 w-10" src="/editImage.png" alt="Imagen De Botton De Editar" /></button>
                     {mostrarModal&&(<form onSubmit={buttonAddList} action=""><div className="bg-blue-500 h-40 rounded flex flex-col justify-evenly items-center">                       
                         <h3 className="text-sm underline ">Escriba el nombre de la lista:</h3>
                     <input className="m-2" type="text" value={textModal} onChange={(e)=>setTextModal(e.target.value)}/>

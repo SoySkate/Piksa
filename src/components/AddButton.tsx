@@ -2,13 +2,17 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Product from "./Modals/Product";
 import path, { parse } from "path";
+import ListaProducts from "./Modals/ListaProducts";
+import ProductButton from "./ProductButton";
 
-export default function AddButton({crearProduct, products, onLineaComanda, precio, precioValue, actualListOfProducts}:any){
+export default function AddButton({crearProduct, onLineaComanda, precio, precioValue, actualListOfProducts, selectActualProduct}:any){
 const handleClick=()=>{
     crearProduct()
 }
 //mostrar el precio del producto en la comanda
-const buttonClick =(n:string, p:number)=>{
+const buttonClick =(n:string, p:number, product:Product)=>{
+    //le paso el product para poder seleccionar el ActuaLProduct
+    selectActualProduct(product)
     let precioArray:string[] = precio;
     console.log("supuestamente este es mi precio:::::",precioArray)
     if(precioArray.length>0 && p!==undefined){
@@ -22,15 +26,13 @@ const buttonClick =(n:string, p:number)=>{
     }
 }
 //pasar la lista de actualListOfProducts a Product[]
-const productsArray = actualListOfProducts as Product[];
+const productsArray = actualListOfProducts as ListaProducts;
 
     return (
-        <div className="flex felx-wrap">
+        <div className="flex flex-wrap">
               {productsArray&&               
-              productsArray.map((p, index)=>(
-                <div key={index}><button onClick={()=>buttonClick(p.nombre,p.precio)} className="bg-[url('/pizza-draw.png')] hover:border-4  border-2 rounded-full w-20 h-20 flex justify-center items-center pb-2 text-2xl font-bold m-2 ">
-                <img className="rounded-full" src={p.image}/>
-             </button></div>
+              productsArray.products.map((product, index)=>(
+                <ProductButton buttonClick={buttonClick} index={index} product={product} onLineaComanda={onLineaComanda}/>
               ))}
 
               <ul>
