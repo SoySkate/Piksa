@@ -1,13 +1,21 @@
 TODO::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
--Hacer buttons para eliminar cosas de la lista de la comanda o para eliminar productos. (por ejemplo en condiguracion o editar o algo asi para borrar esto products.)Hacerle un poco de css xd
+ 
+(((NO S ELIMINEN LES LISTAS DE PRODUCTES NI EL PRODUCTE DE LA COMANDA REPASAR)))
+També em surt lerror de que un children de list>ProductButton es repeteixen les keys..SOLVE IT pls
 
--Que cada item de la comanda sea un componente para poder hacerle cosas
+
+-Hacer buttons para eliminar cosas de la lista de la comanda o para eliminar productos. (por ejemplo en configuracion o editar o algo asi para borrar esto products.)Hacerle un poco de css xd
+-Falta fer un refresh o useEffect del components products pq no fa el refresh
+(((demomento el button edit me elimina todos los productos)))
+-Que cada item de la comanda sea un componente para poder hacerle cosas(Y tener un registro de cada comanda y poder acceder a el-button finalizar comanda -button registro de comandas..)
 -poner buttons de descuento? o generarlos?
 -poner una ruta protegida para las estadisticas, y algo mas creo
+
+    
 _______________________________________________________________________________________________________________
 -Necesario el Auuth del User. 
 -Perque faci Factura normal i simplificada
--Ha de tenir un reistrede comandes i de quins roductes han sortit i de quines factures s han fet
+-Ha de tenir un registre de comandes i de quins roductes han sortit i de quines factures s han fet
 /Algo guay seria inventari control. Ventas/Compras control.
 -Temps que dura una pizza i que treballi segons les comandes i pizzes anteriors.
 //Poder guardar clientes al programa. Com el Klam
